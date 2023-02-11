@@ -12,7 +12,10 @@ To run the googletest files first download the GoogleTestFramework following the
 Then run the following commands on the terminal:
 
 cmake CMakeLists.txt
+
 make
+
 ./runtests
+
 
 
