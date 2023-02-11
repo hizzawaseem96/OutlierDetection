@@ -19,10 +19,6 @@ int calculate(int* input_data, int* output_data, int input_data_length, int max_
    for (int i = 1; i < input_data_length; i++) {
         // calculate change rate
         int change_rate = input_data[i] - output_data[i-1];
-
-        if (abs(change_rate) < max_change_rate){
-            prev_change_rate = change_rate;
-        }
         
         // check if current sample is an outlier
         if (abs(change_rate) > max_change_rate) {
@@ -32,6 +28,7 @@ int calculate(int* input_data, int* output_data, int input_data_length, int max_
         else {
             //prev_change_rate = change_rate;
             output_data[i] = input_data[i];
+            prev_change_rate = change_rate;
         }
    }
 
