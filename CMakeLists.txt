@@ -1,4 +1,4 @@
-project(final_code)
+project(OutlierDetection)
 cmake_minimum_required(VERSION 2.6)
  
 # Locate GTest
